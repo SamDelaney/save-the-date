@@ -57,7 +57,42 @@
         <a class="btn" id="map" target="_blank" rel="noopener">View the venue</a>
       </div>
 
-      <p class="note">Formal invitation to follow.</p>
+      <form class="address" id="address" novalidate hidden>
+        <h2>Where should we send your invitation?</h2>
+        <p class="note">Formal invitation to follow. Let us know where to mail it.</p>
+
+        <label>Name(s) for the envelope
+          <input name="name" autocomplete="name" required placeholder="e.g. Mary &amp; John Smith">
+        </label>
+        <label>Street address
+          <input name="street" autocomplete="address-line1" required>
+        </label>
+        <label>Apartment, suite or unit <span>(optional)</span>
+          <input name="unit" autocomplete="address-line2">
+        </label>
+        <div class="row">
+          <label class="city">City
+            <input name="city" autocomplete="address-level2" required>
+          </label>
+          <label class="state">State
+            <input name="state" autocomplete="address-level1" required>
+          </label>
+          <label class="zip">ZIP
+            <input name="zip" autocomplete="postal-code" required>
+          </label>
+        </div>
+        <label>Country
+          <input name="country" autocomplete="country-name" value="United States">
+        </label>
+        <label>Email <span>(optional, for updates)</span>
+          <input name="email" type="email" autocomplete="email">
+        </label>
+
+        <button class="btn primary" type="submit">Send my address</button>
+        <p class="form-status" id="form-status" role="status"></p>
+      </form>
+
+      <p class="note" id="plain-note">Formal invitation to follow.</p>
     </section>
   </main>
 
