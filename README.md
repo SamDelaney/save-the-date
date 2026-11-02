@@ -15,7 +15,7 @@ Add `#to=Name` to the link to write a name on the envelope, e.g. `https://exampl
 
 ## Custom domain
 
-1. Put the domain (e.g. `www.example.com`) in a file named `CNAME` at the repo root.
+1. The domain is `samandlindsay.com` (Namecheap); it lives in the `CNAME` file at the repo root.
 2. At the domain's DNS provider: for `www`, a CNAME record to `samdelaney.github.io`; for the bare domain, A records to `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`.
 3. In the repo's Settings > Pages, tick "Enforce HTTPS" once the certificate is issued.
 4. Update the `og:url` and `og:image` URLs in `index.html` to the new domain, or link previews keep pointing at github.io.
