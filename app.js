@@ -11,9 +11,11 @@ const EVENT = {
 // Sheet. Paste the form's formResponse URL and each question's entry ID here.
 // Until `action` is set, the address form stays hidden (add #preview-form to see it).
 const ADDRESS_FORM = {
-  action: "",   // https://docs.google.com/forms/d/e/<form id>/formResponse
+  action: "https://docs.google.com/forms/d/e/1FAIpQLSf1ISdh2vVmwSjS8phD93cvu4uVxzl1nOSPWriI-GcNoFmjsg/formResponse",
   fields: {
-    name: "", street: "", unit: "", city: "", state: "", zip: "", country: "", email: "",
+    name: "entry.760846584", street: "entry.1301659844", unit: "entry.1695671068",
+    city: "entry.508454344", state: "entry.1085741636", zip: "entry.1243722469",
+    country: "entry.653703935", email: "entry.1739208305",
   },
 };
 
