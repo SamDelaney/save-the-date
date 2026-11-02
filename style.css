@@ -10,7 +10,7 @@
   --leaf: #6f8f4e;
   --paper: #f2dcc2;        /* envelope */
   --paper-shade: #e8ccad;
-  --w: min(84vw, 400px, 52vh);   /* envelope width; the card is 5:7 */
+  --w: min(84vw, 400px, 46vh);   /* envelope width; the card is 5:7 */
   --ease: cubic-bezier(.65, 0, .35, 1);
 }
 
@@ -183,11 +183,13 @@ main {
 
 /* ---------- Opening sequence (classes added by app.js) ---------- */
 
-.envelope.open { cursor: default; }
+/* While open, the envelope drops so the flap and rising card stay on screen */
+.envelope.open { cursor: default; transform: translateY(calc(var(--w) * .55)); transition: transform .8s var(--ease); }
+.envelope.reveal { transform: none; transition: transform 1.1s var(--ease); }
 .envelope.open .seal { transform: scale(.6); opacity: 0; }
 .envelope.open .env-flap { transform: rotateX(180deg); z-index: 1; }
 
-.envelope.rise .card { transform: translateY(-58%); }
+.envelope.rise .card { transform: translateY(-45%); }
 
 .envelope.reveal .card {
   z-index: 6;
