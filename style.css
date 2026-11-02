@@ -1,15 +1,22 @@
 :root {
   color-scheme: light;
-  --page: #fbf1e4;
-  --cream: #fdf3e0;
-  --ink: #2b2420;
-  --muted: #7a6656;
-  --rule: #d4b59c;
-  --accent: #d9692b;
-  --accent-dark: #b9531c;
-  --leaf: #6f8f4e;
-  --paper: #f2dcc2;        /* envelope */
+  /* Wedding palette: Botanic #0e3e28, Cactus #8c9e62, Cream #f0ecd1, Coral #e08057,
+     Pink #eab7bf, Neutral #70665b, Royal #121557, Sky #a9cce9, Black #2a2a2a */
+  --page: #f0ecd1;         /* cream */
+  --glow: #f8f6e8;
+  --ink: #2a2a2a;          /* black */
+  --muted: #70665b;        /* neutral */
+  --rule: #8c9e62;         /* cactus */
+  --accent: #e08057;       /* coral: hover borders, focus rings */
+  --accent-dark: #c2653f;
+  --paper: #f2dcc2;        /* envelope (peach, from the invite) */
   --paper-shade: #e8ccad;
+  --flap: #f6e3cc;
+  --address: #4a3326;
+  --seal-hi: #eb9a77; --seal: #e08057; --seal-lo: #c2653f; --seal-ink: #f0ecd1;   /* coral */
+  --btn: #0e3e28; --btn-dark: #082a1b; --btn-ink: #f0ecd1;                          /* botanic */
+  --amp: #e08057;          /* the "&" in the names */
+  --count: #0e3e28;        /* countdown number */
   --w: min(84vw, 400px, 46vh);   /* envelope width; the card is 5:7 */
   --ease: cubic-bezier(.65, 0, .35, 1);
 }
@@ -22,7 +29,7 @@ body {
   min-height: 100vh;
   min-height: 100dvh;
   background:
-    radial-gradient(1200px 600px at 50% -10%, #fff8ee 0%, transparent 60%),
+    radial-gradient(1200px 600px at 50% -10%, var(--glow) 0%, transparent 60%),
     var(--page);
   color: var(--ink);
   font-family: "Cormorant Garamond", Georgia, serif;
@@ -116,7 +123,7 @@ main {
   font-family: "Pinyon Script", cursive;
   font-size: clamp(26px, 8vw, 38px);
   line-height: 1.15;
-  color: #4a3326;
+  color: var(--address);
 }
 
 /* Flap: closed it points down over the pocket; it flips up to open */
@@ -133,7 +140,7 @@ main {
   border-radius: 6px 6px 0 0;
 }
 .flap-out {
-  background: linear-gradient(180deg, #f6e3cc 0%, var(--paper) 100%);
+  background: linear-gradient(180deg, var(--flap) 0%, var(--paper) 100%);
   filter: drop-shadow(0 3px 3px rgba(90, 50, 20, .25));
 }
 .flap-in {
@@ -159,9 +166,9 @@ main {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, #ef8a4d 0%, var(--accent) 45%, var(--accent-dark) 100%);
+  background: radial-gradient(circle at 35% 30%, var(--seal-hi) 0%, var(--seal) 45%, var(--seal-lo) 100%);
   box-shadow: inset 0 0 0 4px rgba(255, 255, 255, .12), inset 0 -3px 6px rgba(0, 0, 0, .2), 0 4px 10px rgba(120, 50, 10, .35);
-  color: #fff4e6;
+  color: var(--seal-ink);
   font-family: "Cinzel", serif;
   font-size: 18px;
   letter-spacing: .02em;
@@ -236,7 +243,7 @@ h1 {
   font-size: clamp(48px, 13vw, 72px);
   line-height: 1.1;
 }
-h1 span { color: var(--accent); }
+h1 span { color: var(--amp); }
 .when {
   margin: 14px 0 0;
   font-family: "Cinzel", serif;
@@ -259,7 +266,7 @@ h1 span { color: var(--accent); }
   font-weight: 500;
   font-size: 40px;
   line-height: 1.1;
-  color: var(--accent-dark);
+  color: var(--count);
 }
 
 .actions {
@@ -286,8 +293,8 @@ h1 span { color: var(--accent); }
 }
 .btn:hover { background: #fff; border-color: var(--accent); transform: translateY(-1px); }
 .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
-.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff8f0; }
-.btn.primary:hover { background: var(--accent-dark); border-color: var(--accent-dark); }
+.btn.primary { background: var(--btn); border-color: var(--btn); color: var(--btn-ink); }
+.btn.primary:hover { background: var(--btn-dark); border-color: var(--btn-dark); }
 
 .note { margin: 30px 0 0; font-style: italic; color: var(--muted); }
 
