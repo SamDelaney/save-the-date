@@ -137,6 +137,10 @@ main {
   filter: drop-shadow(0 3px 3px rgba(90, 50, 20, .25));
 }
 .flap-in {
+  /* Mirrored by its own rotateX and again by the opened flap, so its
+     triangle is drawn point-up to come out point-up when open */
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  border-radius: 0 0 6px 6px;
   transform: rotateX(180deg);
   background:
     linear-gradient(rgba(253, 243, 224, .25), rgba(253, 243, 224, .25)),
