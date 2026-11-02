@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Save the Date · Sam &amp; Lindsay</title>
+  <meta name="description" content="Sam &amp; Lindsay are getting married. 12 June 2027, Hidden Farms &amp; Stables, Buckley, WA.">
+  <meta name="theme-color" content="#fdf3e0">
+
+  <!-- Link previews (iMessage, WhatsApp, Facebook...). Crawlers need absolute URLs:
+       change SITE_URL below when the custom domain goes live. -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Save the Date · Sam &amp; Lindsay">
+  <meta property="og:description" content="12 June 2027 · Hidden Farms &amp; Stables, Buckley, WA">
+  <meta property="og:url" content="https://samdelaney.github.io/save-the-date/">
+  <meta property="og:image" content="https://samdelaney.github.io/save-the-date/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/invite.webp" as="image" type="image/webp">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <section class="stage" aria-label="Your save the date">
+      <button class="envelope" id="envelope" type="button" aria-label="Open the envelope">
+        <span class="env-back"></span>
+        <picture class="card">
+          <source srcset="assets/invite.webp" type="image/webp">
+          <img src="assets/invite.jpg" width="1100" height="1540"
+               alt="Save the date. Sam and Lindsay, 12 June 2027, Hidden Farms and Stables, Buckley, Washington.">
+        </picture>
+        <span class="env-front">
+          <span class="addressee" id="addressee"></span>
+        </span>
+        <span class="env-flap"><span class="flap-out"></span><span class="flap-in"></span></span>
+        <span class="seal" aria-hidden="true">S<em>&amp;</em>L</span>
+      </button>
+      <p class="hint" id="hint">Tap to open</p>
+    </section>
+
+    <section class="details" id="details" aria-label="Details">
+      <p class="eyebrow">Save the date</p>
+      <h1>Sam <span>&amp;</span> Lindsay</h1>
+      <p class="when">Saturday, 12 June 2027</p>
+      <p class="where">Hidden Farms &amp; Stables · Buckley, Washington</p>
+      <p class="countdown" id="countdown"></p>
+
+      <div class="actions">
+        <a class="btn primary" id="gcal" target="_blank" rel="noopener">Add to Google Calendar</a>
+        <a class="btn" href="save-the-date.ics" download="Sam-and-Lindsay-Wedding.ics">Apple / Outlook calendar</a>
+        <a class="btn" id="map" target="_blank" rel="noopener">View the venue</a>
+      </div>
+
+      <p class="note">Formal invitation to follow.</p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
