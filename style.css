@@ -303,6 +303,94 @@ h1 span { color: var(--amp); }
   .btn { justify-content: center; }
 }
 
+/* ---------- Link maker (links/index.html) ---------- */
+
+.maker { max-width: 600px; margin: 0 auto; align-items: stretch; padding-top: 48px; }
+.maker header { text-align: center; }
+.lede { margin: 10px 0 0; font-style: italic; color: var(--muted); }
+
+.field { display: block; margin-top: 32px; }
+.label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: "Cinzel", serif;
+  font-size: 13px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.field textarea {
+  display: block;
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--rule);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, .7);
+  color: var(--ink);
+  font: inherit;
+  font-size: 20px;
+  line-height: 1.4;
+  resize: vertical;
+}
+.field textarea:focus { outline: 2px solid var(--accent); outline-offset: 2px; background: #fff; }
+.help { display: block; margin-top: 6px; font-size: 16px; color: var(--muted); }
+
+.results-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 32px;
+  font-family: "Cinzel", serif;
+  font-size: 13px;
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+.results { list-style: none; margin: 12px 0 0; padding: 0; }
+.results li {
+  margin-top: 12px;
+  padding: 16px 18px;
+  border: 1px solid var(--rule);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, .55);
+}
+.who {
+  margin: 0;
+  font-family: "Pinyon Script", cursive;
+  font-size: 32px;
+  line-height: 1.2;
+  color: var(--address);
+}
+.warn { margin: 4px 0 0; font-size: 16px; color: var(--accent-dark); }
+.url {
+  display: block;
+  margin-top: 6px;
+  font-size: 15px;
+  color: var(--muted);
+  overflow-wrap: anywhere;
+}
+.row-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
+.btn.small { min-height: 40px; padding: 0 16px; font-size: 12px; cursor: pointer; }
+
+.empty { margin: 32px 0 0; text-align: center; font-style: italic; color: var(--muted); }
+.empty[hidden], .results-head[hidden] { display: none; }
+
+.toast {
+  position: fixed;
+  left: 50%;
+  bottom: 24px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: var(--btn);
+  color: var(--btn-ink);
+  font-family: "Cinzel", serif;
+  font-size: 13px;
+  letter-spacing: .1em;
+  opacity: 0;
+  transform: translate(-50%, 10px);
+  pointer-events: none;
+  transition: opacity .25s ease, transform .25s ease;
+}
+.toast.on { opacity: 1; transform: translate(-50%, 0); }
+
 /* No animation: show the card and details straight away */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { transition: none !important; animation: none !important; }

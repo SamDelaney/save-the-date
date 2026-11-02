@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Link Maker · Sam &amp; Lindsay</title>
+  <!-- For us, not for guests: keep it out of search results -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#f0ecd1">
+
+  <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Pinyon+Script&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <main class="maker">
+    <header>
+      <p class="eyebrow">Save the date</p>
+      <h1>Personal Links</h1>
+      <p class="lede">Type a name and get a link that writes it on the envelope.</p>
+    </header>
+
+    <label class="field">
+      <span class="label">Names, one per line</span>
+      <textarea id="names" rows="5" spellcheck="false" autocomplete="off"
+                placeholder="Aunt Mary&#10;The Smith Family&#10;Jake &amp; Priya"></textarea>
+      <span class="help">Write each name exactly as it should look on the envelope.</span>
+    </label>
+
+    <div class="results-head" id="results-head" hidden>
+      <span id="count"></span>
+      <button class="btn small" id="copy-all" type="button">Copy all</button>
+    </div>
+    <ol class="results" id="results"></ol>
+
+    <p class="empty" id="empty">Your links will show up here.</p>
+    <p class="note">Names are saved on this device only, so you can come back to the list later.</p>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="links.js"></script>
+</body>
+</html>

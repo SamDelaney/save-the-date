@@ -5,6 +5,7 @@ A static, serverless save-the-date page for Sam & Lindsay (12 June 2027), hosted
 ## Files
 
 - `index.html`, `style.css`, `app.js`: the page. Event details live at the top of `app.js`.
+- `links/`: the personal link maker (shares `style.css`).
 - `save-the-date.ics`: the Apple/Outlook calendar file (keep its CRLF line endings).
 - `assets/invite.webp` / `invite.jpg`: the card, resized from the 1429x2000 original.
 - `assets/og-image.jpg`: the 1200x630 picture shown in iMessage/WhatsApp link previews.
@@ -12,6 +13,8 @@ A static, serverless save-the-date page for Sam & Lindsay (12 June 2027), hosted
 ## Personal links
 
 Add `#to=Name` to the link to write a name on the envelope, e.g. `https://example.com/#to=Aunt%20Mary`.
+
+The easy way: open `/links/` (e.g. `https://samandlindsay.com/links/`), type names one per line, and copy or send each link. The page is `links/index.html` + `links/links.js`; it's hidden from search engines and keeps its list of names on that device only.
 
 ## Custom domain
 
