@@ -75,7 +75,7 @@ main {
   border-radius: 6px;
   background:
     linear-gradient(rgba(253, 243, 224, .25), rgba(253, 243, 224, .25)),
-    url("assets/invite.webp") center / 260% auto;
+    url("assets/liner.webp") center / cover;
   box-shadow: 0 30px 60px -25px rgba(90, 50, 20, .45), 0 8px 20px -10px rgba(90, 50, 20, .3);
   transition: opacity .7s ease, transform .9s var(--ease);
 }
@@ -140,7 +140,7 @@ main {
   transform: rotateX(180deg);
   background:
     linear-gradient(rgba(253, 243, 224, .25), rgba(253, 243, 224, .25)),
-    url("assets/invite.webp") 30% 10% / 260% auto;
+    url("assets/liner.webp") center top / cover;
 }
 
 .seal {
